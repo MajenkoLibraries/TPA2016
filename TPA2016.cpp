@@ -13,7 +13,12 @@ void TPA2016::begin() {
 
 void TPA2016::setAmp(uint8_t reg, uint8_t val) {
     uint8_t state = 0;
+    uint32_t ts = millis();
     while (1) {
+        if (millis() - ts >= 100) {
+            dtwi->stopMaster();
+            return;
+        }
         switch (state) {
             case 0: // begin write
                 if (dtwi->startMasterWrite(0x58)) {

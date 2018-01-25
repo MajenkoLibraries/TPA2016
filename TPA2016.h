@@ -3,8 +3,9 @@
 
 #include <Arduino.h>
 #include <DTWI.h>
+#include <I2S.h>
 
-class TPA2016 {
+class TPA2016 : public Amplifier {
 	private:
         DTWI *dtwi;
         uint8_t enable;
