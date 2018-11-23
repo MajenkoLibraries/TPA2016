@@ -1,0 +1,17 @@
+{
+    "name": "TPA2016",
+    "provides": "TPA2016.h",
+    "license": "LICENSE.md",
+    "readme": "README.md",
+    "description": "Control library for TPA2016 audio amplifier",
+    "category": "Audio",
+    "subcategory": "Amplifier",
+    "maintainer": "Matt Jenkins <matt@majenko.co.uk>",
+    "version": "1.0.4",
+    "family": "pic32",
+    "core": "chipkit",
+    "install": {
+        "TPA2016.cpp": "/",
+        "TPA2016.h": "/"
+    }
+}
